@@ -6,7 +6,7 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-  
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -87,6 +87,13 @@ function Login() {
                   required
                 />
               </div>
+              <a
+                href="#"
+                className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                onClick={() => navigate("/login-identify")}
+              >
+                Esqueceu senha?
+              </a>
               {error && <p className="text-red-500">{error}</p>}{" "}
               <button
                 type="submit"
